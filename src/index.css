@@ -109,3 +109,9 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+.weather-card{
+    width:350px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:18px;
+}

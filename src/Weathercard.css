@@ -1,0 +1,19 @@
+.weather-card{
+    width:350px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:18px;
+    
+    margin:12px 0;
+}
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0;
+}
+.name{
+  color: aquamarine;
+}
+.emp{
+  color: brown;
+}

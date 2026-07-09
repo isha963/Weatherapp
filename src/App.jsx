@@ -27,7 +27,7 @@ function App() {
 
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           setWeather(data);
         } else {
           setWeather(null);
@@ -48,6 +48,13 @@ function App() {
     
   }, []);
 
+  function handleKey(e) {
+    if (e.key === "Enter") {
+      fetchWeather();
+    }
+    
+  }
+
   function handleCity(e) {
     setCity(e.target.value);
     
@@ -57,7 +64,7 @@ function App() {
   return (
     <>
       <h2>"Weather App"</h2>
-      <Searchbar city={city} handleCity={handleCity} handleClick={fetchWeather} />
+      <Searchbar city={city} handleCity={handleCity} handleClick={fetchWeather} handleKey={handleKey} />
       <Weathercard weather={weather} error={error} loading={ loading} city={city} />
     </>
   )
